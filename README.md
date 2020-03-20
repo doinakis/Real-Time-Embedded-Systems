@@ -4,4 +4,4 @@ In order to run the code type at the command line gcc -Wall [name-of-the-file].c
 It is important to type the -lm to link the math library.
 
 
-### More results
+### Results
