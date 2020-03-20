@@ -208,18 +208,14 @@ void *consumer (void *q)
 
     /*This part of the code is added for testing purposes*/
     // gettimeofday(&d.end_time,NULL);
-
-    pthread_mutex_unlock (fifo->mut);
-    pthread_cond_signal (fifo->notFull);
-    /*This part of the code is added for testing purposes
-    calculate when the producer recieved the corresponding function from the queue*/
     // d.delay_time = (double)((d.end_time.tv_usec-d.start_time.tv_usec)/1.0e6+d.end_time.tv_sec-d.start_time.tv_sec);
     // fprintf(f,"%f \n",d.delay_time);
+    pthread_mutex_unlock (fifo->mut);
+    pthread_cond_signal (fifo->notFull);
 
-    /*keep in mind that with the calculation outside of the mutex variable risks
-    multiple threads trying to write to the same file!The reason that its added
-    ouside its because it would add some overhead to the time of the next delay.
-    This was done only for testing */
+
+    /*keep in mind that with the calculation inside the critical part we may add
+    some overhead to the next delay_times */
     (*d.work)(d.arg);
   }
   return (NULL);
