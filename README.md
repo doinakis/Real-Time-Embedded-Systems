@@ -8,4 +8,4 @@ It is important to type the -lm to link the math library.In order to run it just
 
 ### Results
 ![unlimited_buffer](https://github.com/doinakis/Real-Time-Embedded-Systems/blob/master/github_unlimited.jpg)
-![limited_buffer](https://github.com/doinakis/Real-Time-Embedded-Systems/blob/master/github2_limited.jpg)
+![limited_buffer](https://github.com/doinakis/Real-Time-Embedded-Systems/blob/master/github_limited.jpg)
