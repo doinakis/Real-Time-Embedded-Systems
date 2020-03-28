@@ -133,7 +133,7 @@ int main ()
     pthread_join (con[j], NULL);
   }
 
-  fclose(f);
+  //fclose(f);
 
   queueDelete (fifo);
 
