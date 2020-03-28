@@ -159,7 +159,7 @@ void *producer (void *q)
       pthread_cond_wait (fifo->notFull, fifo->mut);
     }
 
-    //add the function in the queue
+    //add a random function in the queue and a random argument
     workFunction  work;
     work.work = functions_array[rand()%8];
     pointer = &random_arguments[rand()%10];
@@ -216,6 +216,7 @@ void *consumer (void *q)
 
     /*keep in mind that with the calculation inside the critical part we may add
     some overhead to the next delay_times */
+    //the execution of the function takes place outside the mutex assuming that its execution doesnt interfere with other executions(e.g write at the same files etc.)
     (*d.work)(d.arg);
   }
   return (NULL);
