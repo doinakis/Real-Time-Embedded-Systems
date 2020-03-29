@@ -9,7 +9,7 @@ It is important to type the -lm to link the math library.In order to run it just
 
 ### Results
 #### with flag -O3
-![limited_buffer](https://github.com/doinakis/Real-Time-Embedded-Systems/blob/master/summary_limited_opt.jpg)
+![limited_buffer](https://github.com/doinakis/Real-Time-Embedded-Systems/blob/master/summary_limited_opt.jpg)![limited_buffer](https://github.com/doinakis/Real-Time-Embedded-Systems/blob/master/1_producer_summary.jpg)
 ![unlimited_buffer](https://github.com/doinakis/Real-Time-Embedded-Systems/blob/master/summary_unlimited_opt.jpg)
 #### without flag -O3
 ![limited_buffer](https://github.com/doinakis/Real-Time-Embedded-Systems/blob/master/summary_limited.jpg)
